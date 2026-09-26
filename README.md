@@ -1,52 +1,437 @@
-![SparkCity dashboard overview](docs/images/sparkcity-capstone.png)
+# New York Digital City
 
-# SparkCity
+### SparkCity Capstone Project
 
-SparkCity is a PySpark-based smart city IoT analytics application. It ingests traffic, air quality, weather, energy, and occupancy sensor data, runs data quality checks, and persists results to PostgreSQL via a Dockerized Spark cluster, with a Streamlit dashboard delivering real-time city operations insights.
+<p align="center">
+  <img src="docs/images/sparkcity-capstone.png" alt="New York Digital City Dashboard" width="90%">
+</p>
 
-For local installation, database configuration, and instructions for running the application, see [SETUP.md](SETUP.md).
+**My Role:** Project Manager • Application Design • Mobility & Traffic Development
 
-## Standard Python setup
+---
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and a Java
-runtime supported by Spark (Java 17 or 21 is recommended), then run these commands
-from the repository root:
+## Project Overview
 
-```bash
-uv python install 3.13
-uv sync --dev
-uv run pytest
+**New York Digital City** is an interactive city-planning and convention
+analytics dashboard developed by a six-person team as our final capstone project
+at **Zip Code Wilmington**.
+
+Working within an **11-day development window**, our team transformed the
+original SparkCity smart-city data engineering foundation into a decision-support
+application designed to answer a practical question:
+
+> **What would be the impact of bringing a major convention to New York Digital City?**
+
+The application brings together traffic, environmental, infrastructure,
+occupancy, energy, and fiscal data to help planners evaluate when to hold a
+large convention and understand its potential impact on the city.
+
+The final application provides a unified planning experience across six primary
+areas:
+
+- Overview
+- Convention Planner
+- Mobility & Traffic
+- Environment
+- Capacity & Infrastructure
+- Fiscal Impact
+
+The team's final analysis centered on a proposed convention window of
+**November 3–5, 2027**.
+
+---
+
+## The Challenge
+
+Planning a large convention requires more than selecting an available date.
+
+City planners need to consider multiple factors at the same time, including:
+
+- Traffic volume and congestion
+- Transportation conditions
+- Environmental conditions
+- Hotel and occupancy capacity
+- Energy and infrastructure demand
+- Visitor spending
+- City expenses and revenue
+- Overall fiscal impact
+
+These factors existed across separate datasets and analytical domains.
+
+Our challenge was to transform those datasets into a single application that
+would allow planners to evaluate the city as a connected system rather than
+reviewing each dataset independently.
+
+---
+
+## The Solution
+
+New York Digital City combines data engineering, analytics, and interactive
+visualization into a unified convention-planning dashboard.
+
+The application allows users to explore historical city conditions, review a
+recommended convention window, compare planning factors, and examine potential
+impacts across multiple operational areas.
+
+The solution combines:
+
+- Historical data analysis
+- PostgreSQL data storage
+- Python-based analytics
+- PySpark data workflows
+- Interactive Streamlit dashboards
+- Plotly visualizations
+- Convention scenario modeling
+- Data validation
+- Automated testing
+- Responsive dashboard design
+
+---
+
+# Dashboard Areas
+
+## Overview
+
+The Overview page provides an executive-level summary of the convention
+planning analysis.
+
+It highlights:
+
+- Recommended convention period
+- Alternative planning options
+- Convention suitability information
+- Key city indicators
+- Planning insights
+- Navigation to each analytical domain
+
+The original application design and visual concept were created by **Leigh**,
+with the Overview / Landing Page implementation developed by **Vijay**.
+
+---
+
+## Convention Planner
+
+The Convention Planner brings multiple planning factors together to evaluate
+potential convention periods.
+
+Users can explore planning considerations and compare factors that influence
+the overall recommendation.
+
+The planner presents:
+
+- Suitability information
+- Factor-level analysis
+- Recommended planning window
+- Alternative planning window
+- Key planning takeaways
+- Month-by-month comparisons
+
+The team's final convention scenario focused on **November 3–5, 2027**.
+
+---
+
+## Mobility & Traffic
+
+The Mobility & Traffic dashboard evaluates transportation conditions
+surrounding the proposed convention period.
+
+The analysis examines approximately **110,000 traffic records** and explores:
+
+- Vehicle volume
+- Average traffic speed
+- Congestion levels
+- Road-type patterns
+- Peak traffic periods
+- Historical weekday traffic behavior
+- Potential convention-related transportation impact
+
+Historical **November Wednesday–Friday traffic patterns** provide context for
+understanding conditions surrounding the proposed Wednesday–Friday convention
+window.
+
+The dashboard translates traffic data into planning insights and transportation
+recommendations that can be used when evaluating the proposed event.
+
+---
+
+## Environment
+
+The Environment dashboard evaluates environmental conditions that may influence
+convention planning.
+
+Analysis includes:
+
+- Historical weather
+- Temperature
+- Precipitation
+- Air quality
+- Environmental planning considerations
+- Historical conditions surrounding the proposed convention period
+
+Historical environmental data provides additional planning context for the
+November convention window.
+
+---
+
+## Capacity & Infrastructure
+
+The Capacity & Infrastructure dashboard evaluates whether city resources can
+support increased visitor demand.
+
+Analysis includes factors such as:
+
+- Occupancy
+- Available capacity
+- Infrastructure utilization
+- Energy demand
+- City resource considerations
+
+This domain helps planners evaluate whether the city has sufficient capacity
+to support a major event while considering the demands placed on existing
+resources.
+
+---
+
+## Fiscal Impact
+
+The Fiscal Impact dashboard examines the potential financial implications of
+hosting a major convention.
+
+The analysis considers:
+
+- Visitor spending
+- Revenue
+- Expenses
+- Hotel occupancy
+- Seasonal fiscal patterns
+- Estimated event-related costs
+- Potential net fiscal impact
+
+Interactive controls allow planners to explore how changes in factors such as
+attendance, duration, timing, and planning assumptions affect projected
+financial outcomes.
+
+---
+
+# My Contributions
+
+## Project Manager, Application Designer & Mobility / Traffic Developer
+
+I served as the **Project Manager for our six-person development team**, guiding
+the project from initial planning and application design through development,
+integration, testing, and final presentation.
+
+I also created the **original application design and visual direction**,
+establishing the foundation for the dashboard's overall layout, user experience,
+and presentation. Team members then implemented their assigned analytical
+domains within the shared application.
+
+In addition to project leadership and design, I maintained hands-on technical
+ownership of the **Mobility & Traffic** domain.
+
+---
+
+### Project Management & Team Leadership
+
+As Project Manager, I worked across all aspects of the project, including:
+
+- Organizing work across the six dashboard domains
+- Establishing project priorities
+- Coordinating development activities
+- Tracking tasks, dependencies, and overall project progress
+- Facilitating team discussions and decision-making
+- Coordinating work between independently developed application areas
+- Managing final application integration
+- Reviewing application consistency across dashboard areas
+- Coordinating testing and regression testing
+- Supporting Git/GitHub branch and pull request workflows
+- Identifying and helping resolve integration issues
+- Coordinating final application readiness
+- Organizing the team's demo flow and presentation
+- Keeping the team focused on delivering the completed application within the
+  11-day development window
+
+---
+
+### Application Design & User Experience
+
+I created the **original application design and dashboard concept** that
+provided the visual foundation for New York Digital City.
+
+My design contributions included:
+
+- Establishing the original dashboard layout and visual direction
+- Designing the initial application experience and page structure
+- Defining how information should be organized and presented
+- Establishing the visual foundation used across the application
+- Reviewing team-developed pages for consistency
+- Refining layouts, spacing, typography, and responsive behavior
+- Helping create a cohesive experience across independently developed
+  dashboard areas
+
+The individual dashboard areas were implemented collaboratively by the team,
+with developers responsible for coding their assigned domains.
+
+---
+
+### Mobility & Traffic Development
+
+I had direct technical ownership of the **Mobility & Traffic** dashboard.
+
+My work included:
+
+- Analyzing approximately 110,000 traffic records
+- Evaluating vehicle volume, average speed, and congestion patterns
+- Analyzing traffic behavior by road type
+- Identifying peak traffic periods
+- Developing historical November weekday comparisons
+- Evaluating the potential traffic impact of the proposed convention
+- Translating traffic analysis into actionable planning insights
+- Building interactive dashboard visualizations
+- Developing transportation recommendations for convention planners
+- Refining dashboard layout and responsive behavior
+
+---
+
+### Application Integration & Quality
+
+I worked across the completed application to help bring the team's independently
+developed components together into a cohesive final product.
+
+This included:
+
+- Integrating team-developed features
+- Reviewing and merging team changes
+- Synchronizing convention dates and assumptions across pages
+- Standardizing terminology and presentation
+- Supporting responsive design and UI consistency
+- Creating and coordinating unit and integration testing tasks
+- Running regression tests against the integrated application
+- Troubleshooting issues introduced during integration
+- Supporting final release readiness
+
+The final integrated application completed the automated test suite with:
+
+```text
+132 passed
+11 skipped
+0 failed
 ```
 
-In notebooks and Python modules, import the shared utilities from the installed
-`sparkcityx` package:
+Serving simultaneously as **Project Manager, application designer, and
+contributing developer** required balancing project leadership, product
+direction, and hands-on technical delivery.
 
-```python
-from sparkcityx.data_quality import get_validation_config, validate_dataframe
-from sparkcityx.loaders import load_dataset
+The experience strengthened my ability to lead a development team, translate an
+initial concept into an implemented product, coordinate technical dependencies,
+integrate independently developed components, resolve technical issues, and
+guide a project from design through delivery under a compressed development
+schedule.
 
-traffic_df = load_dataset(spark, "data/reference/traffic_sensors.csv")
-report = validate_dataframe(traffic_df, "traffic")
-print(report["valid"], report["record_count"])
+---
+
+# Data
+
+The application works with seven primary smart-city data domains:
+
+| Dataset | Purpose |
+|---|---|
+| Traffic Sensors | Vehicle volume, speed, congestion, and road conditions |
+| Air Quality | PM2.5, PM10, NO2, CO, temperature, and humidity |
+| Weather | Temperature, precipitation, wind, humidity, and pressure |
+| Energy Meters | Power consumption and electrical measurements |
+| City Zones | Geographic and city-zone reference information |
+| Occupancy | Available rooms, occupied rooms, and guest activity |
+| Fiscal Data | Revenue and expense information |
+
+The project supports multiple source-data formats, including:
+
+- CSV
+- JSON
+- Parquet
+
+Data validation and transformation utilities are implemented through the
+shared `sparkcityx` Python package.
+
+---
+
+# Technical Architecture
+
+New York Digital City combines a shared data layer with independently developed
+analytical dashboard domains.
+
+```text
+Smart City Data Sources
+        │
+        ▼
+Data Ingestion & Validation
+        │
+        ▼
+PySpark / Python Processing
+        │
+        ▼
+PostgreSQL
+        │
+        ▼
+Shared Analytics & Planning Logic
+        │
+        ▼
+Streamlit Application
+        │
+        ├── Overview
+        ├── Convention Planner
+        ├── Mobility & Traffic
+        ├── Environment
+        ├── Capacity & Infrastructure
+        └── Fiscal Impact
 ```
 
-Validation operates on an existing PySpark DataFrame and does not access files or
-databases. `load_dataset` separately supports CSV, Parquet, JSON arrays, and
-newline-delimited JSON. Supported validation types are `traffic`, `air_quality`,
-`weather`, `energy`, `city_zones`, `occupancy`, and `fiscal`; fiscal aliases include
-`financial`, `financial_data`, and `fiscal_data`.
+The shared architecture allowed team members to work independently on assigned
+analytical domains while integrating each page into a common application.
 
-## Shared PostgreSQL connection
+---
 
-Copy `.env.example` to `secrets/.env`, replace its placeholders with the
-instructor-provided credentials, and keep that file local. Verify the connection
-without reading or changing application data:
+# Tech Stack
 
-```bash
-uv run python scripts/check-database.py
-```
+## Languages & Analytics
 
-Application code should use the shared helper rather than embedding credentials:
+- Python
+- SQL
+- PySpark
+- Pandas
+
+## Application & Visualization
+
+- Streamlit
+- Plotly
+- PyDeck
+- HTML/CSS
+
+## Data
+
+- PostgreSQL
+- Psycopg
+- CSV
+- JSON
+- Parquet
+
+## Development & Infrastructure
+
+- Git
+- GitHub
+- Docker
+- Docker Compose
+- `uv`
+- Pytest
+
+---
+
+# PostgreSQL Integration
+
+The application uses PostgreSQL as the team's shared relational data store.
+
+Application code uses a shared database helper rather than embedding
+credentials directly in application code.
 
 ```python
 from sparkcityx.database import connect_database
@@ -57,552 +442,324 @@ with connect_database() as connection:
         assert cursor.fetchone() == (1,)
 ```
 
-`connect_database` reads `DATABASE_URL` from the process environment. The helper
-does not create schemas, tables, or rows; those operations require explicit team
-ownership and review.
+`connect_database` reads the `DATABASE_URL` from the process environment.
 
-The helper requires an encrypted SSL mode and rejects `disable`, `allow`, and
-`prefer`. The instructor-provided endpoint currently uses `sslmode=require`.
-Certificate and hostname verification should be upgraded to `verify-full` with
-the approved `sslrootcert` when the S2 certificate authority is provided.
+Database credentials are supplied through environment configuration and are
+not committed to the repository.
 
-### Shared schema setup
+The database connection requires an encrypted SSL mode.
 
-Preview the additive schema migration before applying it:
+---
+
+# Data Loading & Validation
+
+The project includes reusable utilities for loading and validating the primary
+datasets.
+
+Supported validation domains include:
+
+- Traffic
+- Air quality
+- Weather
+- Energy
+- City zones
+- Occupancy
+- Fiscal data
+
+Validation operates on PySpark DataFrames and is separated from file-loading
+and database operations.
+
+Example:
+
+```python
+from sparkcityx.data_quality import get_validation_config, validate_dataframe
+from sparkcityx.loaders import load_dataset
+
+traffic_df = load_dataset(
+    spark,
+    "data/reference/traffic_sensors.csv"
+)
+
+report = validate_dataframe(
+    traffic_df,
+    "traffic"
+)
+
+print(report["valid"], report["record_count"])
+```
+
+The shared loader supports:
+
+- CSV
+- Parquet
+- JSON arrays
+- Newline-delimited JSON
+
+---
+
+# Testing
+
+Testing was an important part of the development and final integration process.
+
+The project includes automated tests covering application logic, data handling,
+dashboard behavior, and integration-related functionality.
+
+The final integrated build completed the full automated test suite with:
+
+```text
+132 passed
+11 skipped
+0 failed
+```
+
+Automated testing was supplemented by manual regression testing of the
+integrated dashboard before final delivery.
+
+---
+
+# Development Workflow
+
+The six-person team used a branch-based Git/GitHub development workflow.
+
+```text
+Individual / Feature Branch
+            │
+            ▼
+        Pull Request
+            │
+            ▼
+            dev
+            │
+      Integration Testing
+            │
+            ▼
+           main
+```
+
+Team members developed their assigned dashboard areas independently and
+submitted completed work through pull requests.
+
+During final integration, the team:
+
+1. Merged completed feature branches into `dev`
+2. Synchronized convention dates and planning assumptions
+3. Reviewed dashboard styling and terminology
+4. Resolved integration issues
+5. Ran automated tests
+6. Performed manual regression testing
+7. Promoted the completed application for final presentation
+
+This workflow allowed six developers to work concurrently while maintaining a
+shared integration branch.
+
+---
+
+# Team
+
+New York Digital City was developed by a **six-person team** as the final
+capstone project for the **Zip Code Wilmington Data Engineering Program**.
+
+| Team Member | Role / Primary Responsibility |
+|---|---|
+| **Leigh** | **Project Manager, Application Design & Mobility / Traffic Development** |
+| Vijay | Overview / Landing Page Development |
+| Monah | **Scrum Master, Convention Planner |
+| Matt | Environment |
+| Sloane | Capacity & Infrastructure |
+| Hakeem | Fiscal Impact |
+
+While each developer had primary ownership of an analytical domain, development,
+integration, testing, and final delivery required collaboration across the team.
+
+---
+
+# Running the Application Locally
+
+For complete local installation and database configuration instructions, see
+the repository's setup documentation.
+
+## Standard Python Setup
+
+Install `uv` and a Java runtime supported by Spark. Java 17 or 21 is
+recommended.
+
+From the repository root:
+
+```bash
+uv python install 3.13
+uv sync --dev
+```
+
+Run the automated tests:
+
+```bash
+uv run pytest
+```
+
+---
+
+## Database Configuration
+
+Copy `.env.example` to:
+
+```text
+secrets/.env
+```
+
+Replace the placeholders with the appropriate database credentials.
+
+> **Important:** Environment files containing database credentials must not be
+> committed to GitHub.
+
+Verify the database connection without modifying application data:
+
+```bash
+uv run python scripts/check-database.py
+```
+
+---
+
+## Database Schema
+
+Preview the additive schema migration:
 
 ```bash
 uv run python scripts/setup-database.py
 ```
 
-After team review, the infrastructure owner can apply it once and inspect the
-result. Both commands are safe to repeat:
+After review, apply the schema:
 
 ```bash
 uv run python scripts/setup-database.py --apply
+```
+
+Inspect the database:
+
+```bash
 uv run python scripts/inspect-database.py
 ```
 
-The migration creates the `sparkcity` schema and seven empty tables. It contains
-no drop, truncate, update, delete, or data-loading operations.
+The migration creates the `sparkcity` schema and seven application tables.
 
-### Loading one dataset
+---
 
-Each dataset owner should preview and then load only their assigned dataset:
+## Loading Data
+
+Dataset owners can preview and load individual datasets.
+
+Example using traffic data:
 
 ```bash
 uv run python scripts/load-dataset.py traffic
+```
+
+Apply the load:
+
+```bash
 uv run python scripts/load-dataset.py traffic --apply
 ```
 
-The loader validates the Spark DataFrame before opening a database transaction,
-targets the existing `sparkcity` table, and uses `ON CONFLICT DO NOTHING`. A
-repeat run preserves existing rows and constraints instead of replacing tables.
-
-# Smart City IoT Analytics Pipeline
-## 5-Day PySpark Data Engineering Lab
-
-### 🎯 Project Overview
-
-Build a comprehensive data pipeline that ingests, processes, and analyzes IoT sensor data from a smart city infrastructure. Students will use PySpark to handle large-scale sensor data, perform real-time analytics, and create actionable insights for city operations through an interactive dashboard.
-
-### 🎓 Learning Objectives
-
-By the end of this project, students will be able to:
-
-- Set up and configure a distributed Spark cluster using Docker
-- Ingest and process multi-format IoT data streams using PySpark
-- Implement data quality checks and cleaning procedures for sensor data
-- Perform time-series analysis and anomaly detection on large datasets
-- Design and optimize data pipelines for real-time processing
-- Integrate Spark with RDBMS (PostgreSQL) for data persistence
-- Create monitoring dashboards for operational insights
-- Apply best practices for data engineering workflows
-
-### 📊 Data Sources & Schema
-
-#### Primary Datasets (Simulated Smart City Data)
-
-**1. Traffic Sensors (`traffic_sensors.csv`)**
-```sql
-sensor_id: string
-timestamp: timestamp
-location_lat: double
-location_lon: double
-vehicle_count: integer
-avg_speed: double
-congestion_level: string
-road_type: string
-```
-
-**2. Air Quality Monitors (`air_quality.json`)**
-```sql
-sensor_id: string
-timestamp: timestamp
-location_lat: double
-location_lon: double
-pm25: double
-pm10: double
-no2: double
-co: double
-temperature: double
-humidity: double
-```
-
-**3. Weather Stations (`weather_data.parquet`)**
-```sql
-station_id: string
-timestamp: timestamp
-location_lat: double
-location_lon: double
-temperature: double
-humidity: double
-wind_speed: double
-wind_direction: double
-precipitation: double
-pressure: double
-```
-
-**4. Energy Consumption (`energy_meters.csv`)**
-```sql
-meter_id: string
-timestamp: timestamp
-building_type: string
-location_lat: double
-location_lon: double
-power_consumption: double
-voltage: double
-current: double
-power_factor: double
-```
-
-**5. Reference Data (`city_zones.csv`)**
-```sql
-zone_id: string
-zone_name: string
-zone_type: string
-lat_min: double
-lat_max: double
-lon_min: double
-lon_max: double
-population: integer
-```
-
-**6. Occupancy Data (`occupancy_data.csv`)**
-```sql
-sensor_id: string
-timestamp: timestamp
-location_lat: double
-location_lon: double
-available_rooms: integer
-occupied_rooms: integer
-guests: integer
-```
-
-**7. Fiscal Data (`fiscal_data.csv`)**
-```sql
-sensor_id: string
-timestamp: timestamp
-location_lat: double
-location_lon: double
-expense: double
-revenue: double
-```
-
-### 🛠 Technical Requirements
-
-#### Infrastructure
-- **Spark Cluster:** 3-node cluster (1 master, 2 workers) via Docker Compose
-- **Database:** PostgreSQL 13+ for data persistence
-- **Dashboard:** Grafana or Streamlit for visualization
-- **Storage:** Local filesystem with HDFS simulation
-- **Languages:** Python 3.8+, SQL
-
-#### Python Dependencies
-```
-pyspark==3.4.0
-pandas==1.5.3
-psycopg2-binary==2.9.5
-matplotlib==3.6.3
-seaborn==0.12.2
-streamlit==1.20.0
-plotly==5.13.1
-requests==2.28.2
-```
-
-### 📅 Daily Breakdown
-
-## Day 1: Environment Setup & Data Exploration
-**Duration:** 8 hours  
-**Focus:** Infrastructure setup, data ingestion, basic transformations
-
-### Learning Objectives
-- Configure Spark cluster and development environment
-- Understand IoT data characteristics and challenges
-- Implement basic data ingestion patterns
-- Explore PySpark DataFrame operations
-
-### Tasks
-
-#### Morning (4 hours)
-1. **Environment Setup (2 hours)**
-   - Clone repository and review project structure
-   - Start Docker Compose cluster (Spark + PostgreSQL)
-   - Verify Spark UI and database connectivity
-   - Configure Jupyter notebook with PySpark
-
-2. **Data Exploration (2 hours)**
-   - Load sample datasets into Spark DataFrames
-   - Examine data schemas and quality issues
-   - Generate basic statistics for each data source
-   - Identify missing values and outliers
-
-#### Afternoon (4 hours)
-3. **Basic Data Ingestion (2 hours)**
-   - Implement CSV, JSON, and Parquet readers
-   - Handle schema inference and enforcement
-   - Create reusable data loading functions
-   - Set up data validation checks
-
-4. **Initial Data Transformations (2 hours)**
-   - Standardize timestamp formats across datasets
-   - Add derived columns (hour, day, week)
-   - Implement basic data type conversions
-   - Create geographical zone mappings
-
-### Deliverables
-- Working Spark cluster with all services running
-- Data ingestion notebook with basic EDA
-- Documentation of data quality findings
-- Initial data loading pipeline functions
-
-### Key Concepts Covered
-- Spark cluster architecture and configuration
-- DataFrame creation and basic operations
-- Schema management and data types
-- File format handling (CSV, JSON, Parquet)
+The loader validates the PySpark DataFrame before opening the database
+transaction and preserves existing records when the load is repeated.
 
 ---
 
-## Day 2: Data Quality & Cleaning Pipeline
-**Duration:** 8 hours  
-**Focus:** Data quality assessment, cleaning procedures, standardization
+## Start the Dashboard
 
-### Learning Objectives
-- Implement comprehensive data quality checks
-- Design cleaning procedures for IoT sensor data
-- Handle missing values and outliers appropriately
-- Create reusable data quality functions
+The dashboard entry point is located at:
 
-### Tasks
-
-#### Morning (4 hours)
-1. **Data Quality Assessment (2 hours)**
-   - Develop data profiling functions
-   - Identify anomalies in sensor readings
-   - Check for duplicate records across time series
-   - Analyze temporal patterns and gaps
-
-2. **Missing Data Strategy (2 hours)**
-   - Implement interpolation for time series gaps
-   - Create business rules for acceptable missing data
-   - Design backfill procedures for critical sensors
-   - Handle sensors with extended outages
-
-#### Afternoon (4 hours)
-3. **Outlier Detection & Treatment (2 hours)**
-   - Implement statistical outlier detection (IQR, Z-score)
-   - Create domain-specific validation rules
-   - Design outlier treatment strategies
-   - Build alerting for anomalous readings
-
-4. **Data Standardization (2 hours)**
-   - Standardize location coordinates
-   - Normalize sensor measurement units
-   - Create consistent naming conventions
-   - Implement data lineage tracking
-
-### Deliverables
-- Data quality assessment report
-- Comprehensive cleaning pipeline
-- Outlier detection and treatment functions
-- Standardized datasets ready for analysis
-
-### Key Concepts Covered
-- Data profiling techniques in Spark
-- Time series data quality challenges
-- Statistical outlier detection methods
-- Data validation and business rules
-
----
-
-## Day 3: Time Series Analysis & Feature Engineering
-**Duration:** 8 hours  
-**Focus:** Temporal analysis, correlation studies, feature creation
-
-### Learning Objectives
-- Perform time series analysis on sensor data
-- Calculate correlations between different sensor types
-- Engineer features for predictive modeling
-- Implement window functions for trend analysis
-
-### Tasks
-
-#### Morning (4 hours)
-1. **Temporal Pattern Analysis (2 hours)**
-   - Analyze hourly, daily, and weekly patterns
-   - Identify seasonal trends in sensor data
-   - Calculate moving averages and trend indicators
-   - Detect pattern anomalies and shifts
-
-2. **Cross-Sensor Correlation Analysis (2 hours)**
-   - Correlate air quality with traffic patterns
-   - Analyze weather impact on energy consumption
-   - Study relationships between sensor proximity
-   - Create correlation matrices and heatmaps
-
-#### Afternoon (4 hours)
-3. **Feature Engineering (3 hours)**
-   - Create lag features for time series prediction
-   - Calculate rolling statistics (mean, std, min, max)
-   - Engineer interaction features between sensors
-   - Build aggregated features by city zones
-
-4. **Trend Analysis (1 hour)**
-   - Implement trend detection algorithms
-   - Calculate rate of change indicators
-   - Identify long-term vs short-term patterns
-   - Create trend visualization functions
-
-### Deliverables
-- Time series analysis dashboard
-- Correlation study findings
-- Feature engineering pipeline
-- Trend analysis reports
-
-### Key Concepts Covered
-- Window functions in Spark SQL
-- Time series feature engineering
-- Statistical correlation analysis
-- Temporal pattern recognition
-
----
-
-## Day 4: Advanced Analytics & Anomaly Detection
-**Duration:** 8 hours  
-**Focus:** Predictive modeling, anomaly detection, optimization
-
-### Learning Objectives
-- Implement machine learning pipelines in PySpark
-- Build anomaly detection systems for IoT data
-- Optimize pipeline performance and resource usage
-- Create predictive models for city operations
-
-### Tasks
-
-#### Morning (4 hours)
-1. **Anomaly Detection System (2 hours)**
-   - Implement isolation forest for multivariate anomalies
-   - Create threshold-based alerting systems
-   - Build real-time anomaly scoring
-   - Design anomaly investigation workflows
-
-2. **Predictive Modeling (2 hours)**
-   - Build traffic congestion prediction models
-   - Create air quality forecasting pipeline
-   - Implement energy demand prediction
-   - Validate model performance and accuracy
-
-#### Afternoon (4 hours)
-3. **Pipeline Optimization (2 hours)**
-   - Implement data partitioning strategies
-   - Optimize Spark configurations for performance
-   - Add caching for frequently accessed data
-   - Monitor resource utilization and bottlenecks
-
-4. **Advanced Analytics (2 hours)**
-   - Implement clustering for sensor grouping
-   - Create recommendation systems for city planning
-   - Build alerting systems for critical thresholds
-   - Design automated response triggers
-
-### Deliverables
-- Anomaly detection system with alerting
-- Predictive models with validation metrics
-- Optimized pipeline with performance benchmarks
-- Advanced analytics dashboard
-
-### Key Concepts Covered
-- MLlib for machine learning in Spark
-- Performance tuning and optimization
-- Real-time stream processing concepts
-- Advanced statistical modeling techniques
-
----
-
-## Day 5: Database Integration & Dashboard Creation
-**Duration:** 8 hours  
-**Focus:** Data persistence, dashboard development, deployment
-
-### Learning Objectives
-- Integrate Spark with PostgreSQL for data persistence
-- Design efficient database schemas for analytics
-- Create interactive dashboards for city operations
-- Implement automated pipeline scheduling
-
-### Tasks
-
-#### Morning (4 hours)
-1. **Database Schema Design (1 hour)**
-   - Design star schema for analytics
-   - Create optimized table structures
-   - Implement proper indexing strategies
-   - Set up data retention policies
-
-2. **Data Pipeline to Database (3 hours)**
-   - Implement Spark-to-PostgreSQL connectors
-   - Create batch and streaming write operations
-   - Design upsert operations for real-time updates
-   - Implement data quality checks before writes
-
-#### Afternoon (4 hours)
-3. **Dashboard Development (3 hours)**
-   - Create real-time city operations dashboard
-   - Build interactive visualizations for each sensor type
-   - Implement drill-down capabilities
-   - Add alerting and notification features
-
-4. **Pipeline Automation (1 hour)**
-   - Create scheduling workflows
-   - Implement error handling and recovery
-   - Set up monitoring and logging
-   - Document deployment procedures
-
-### Deliverables
-- Production-ready database schema
-- Automated data pipeline with scheduling
-- Interactive city operations dashboard
-- Complete project documentation
-
-### Key Concepts Covered
-- Spark-RDBMS integration patterns
-- Dashboard design principles
-- Pipeline automation and monitoring
-- Production deployment considerations
-
----
-
-### 🏗 Project Structure
-
-```
-smart-city-iot-pipeline/
-├── README.md
-├── requirements.txt
-├── docker-compose.yml
-├── config/
-│   ├── spark-defaults.conf
-│   └── postgres-init.sql
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── reference/
-├── notebooks/
-│   ├── day1_setup_and_exploration.ipynb
-│   ├── day2_data_quality_cleaning.ipynb
-│   ├── day3_time_series_analysis.ipynb
-│   ├── day4_advanced_analytics.ipynb
-│   └── day5_dashboard_deployment.ipynb
-├── src/
-│   ├── data_ingestion/
-│   ├── data_quality/
-│   ├── analytics/
-│   ├── models/
-│   └── utils/
-├── sql/
-│   ├── create_tables.sql
-│   └── analytical_queries.sql
-├── dashboard/
-│   ├── app.py
-│   └── templates/
-├── tests/
-│   └── test_pipeline.py
-└── docs/
-    ├── setup_guide.md
-    ├── daily_objectives.md
-    └── troubleshooting.md
+```text
+dashboard/app.py
 ```
 
-### 📝 Assessment Criteria
-
-#### Technical Implementation (60%)
-- **Code Quality:** Clean, documented, following PySpark best practices
-- **Data Pipeline:** Robust ingestion, cleaning, and transformation
-- **Performance:** Efficient use of Spark features and optimizations
-- **Database Integration:** Proper schema design and data persistence
-
-#### Analytics & Insights (25%)
-- **Data Quality:** Comprehensive cleaning and validation
-- **Analysis Depth:** Meaningful insights from sensor data
-- **Visualization:** Clear, informative dashboard design
-- **Anomaly Detection:** Effective identification of unusual patterns
-
-#### Documentation & Presentation (15%)
-- **Code Documentation:** Clear comments and README files
-- **Daily Deliverables:** Complete notebook submissions
-- **Final Presentation:** Clear explanation of insights and architecture
-- **Reproducibility:** Others can run the pipeline successfully
-
-### 🚀 Getting Started
-
-1. **Prerequisites Check:**
-   - Docker and Docker Compose installed
-   - Python 3.8+ with pip
-   - Git for version control
-   - 8GB+ RAM recommended
-
-2. **Repository Setup:**
-   ```bash
-   git clone [repository-url]
-   cd smart-city-iot-pipeline
-   pip install -r requirements.txt
-   ```
-
-3. **Start Infrastructure:**
-   ```bash
-   docker-compose up -d
-   # Wait for services to be ready (check logs)
-   docker-compose logs -f
-   ```
-
-4. **Verify Setup:**
-   - Spark UI: http://localhost:8080
-   - Jupyter: http://localhost:8888
-   - Database: localhost:5432
-
-5. **Begin Day 1 Activities:**
-   - Open `notebooks/day1_setup_and_exploration.ipynb`
-   - Setup kanban board for project
-   - Follow daily objectives and complete tasks
-   - Submit deliverables at end of each day
-   - Generate your data using scripts
-
-### 🆘 Support Resources
-
-- **Spark Documentation:** https://spark.apache.org/docs/latest/
-- **PySpark API Reference:** https://spark.apache.org/docs/latest/api/python/
-- **PostgreSQL Documentation:** https://www.postgresql.org/docs/
-- **Project Issues:** Use GitHub Issues for technical questions
-- **Daily Check-ins:** Instructor availability for guidance
-
-### 🎉 Success Metrics
-
-By project completion, students will have:
-- ✅ Built a production-ready data pipeline processing 1M+ sensor readings
-- ✅ Implemented comprehensive data quality and anomaly detection
-- ✅ Created actionable insights for smart city operations
-- ✅ Did you actually read this file? Say "booyah" to an instructor  
-- ✅ Developed skills in distributed data processing with Spark
-- ✅ Gained experience with modern data engineering tools and practices
+Use the repository's setup documentation for the current environment-specific
+startup command and database configuration.
 
 ---
 
-*Ready to build the future of smart cities? Let's get started!* 🏙️⚡
+# Security & Configuration
+
+Sensitive configuration is managed through environment variables rather than
+being embedded in application code.
+
+The PostgreSQL connection helper requires an encrypted SSL mode and rejects
+insecure connection modes.
+
+Database credentials and local environment files should never be committed to
+source control.
+
+---
+
+# Project Evolution
+
+SparkCity began as a smart-city IoT data engineering foundation focused on
+PySpark, sensor data, data quality, and PostgreSQL.
+
+For our final capstone, the six-person team transformed that foundation into
+**New York Digital City** — an integrated convention-planning and city-impact
+analytics application.
+
+The final project expanded the original data engineering foundation by
+introducing:
+
+- A unified multi-page analytical dashboard
+- Convention suitability analysis
+- Cross-domain planning recommendations
+- Traffic impact analysis
+- Environmental planning analysis
+- Capacity and infrastructure analysis
+- Fiscal impact modeling
+- Shared application design and navigation
+- Responsive dashboard behavior
+- Automated testing
+- Team-based integration and release workflows
+
+The result was a working decision-support application designed and developed
+within an **11-day capstone window**.
+
+---
+
+# Key Takeaways
+
+New York Digital City demonstrated how multiple data domains can be brought
+together to support a single planning decision.
+
+From a development perspective, the project required more than building
+individual dashboard pages. Six developers had to coordinate data assumptions,
+application architecture, visual design, testing, Git workflows, integration,
+and presentation under a compressed delivery schedule.
+
+As **Project Manager, application designer, and Mobility & Traffic developer**,
+the project brought together several areas of my experience:
+
+- Project leadership
+- Team coordination
+- Application and UX design
+- Data analysis
+- Python development
+- PySpark
+- SQL and PostgreSQL
+- Data visualization
+- Application development
+- Unit and integration testing
+- Git/GitHub collaboration
+- Application integration
+- Responsive UI design
+- Technical communication
+- Presentation and delivery
+
+The project reinforced the importance of not only building technically sound
+solutions, but also coordinating people, technology, data, and design to deliver
+a product that decision-makers can actually use.
+
+---
+
+# Project Status
+
+### Completed Capstone Project
+
+New York Digital City was completed as the final team capstone for the
+**Zip Code Wilmington Data Engineering Program**.
+
+The repository is maintained as part of my data engineering, application
+development, and technical leadership portfolio.
